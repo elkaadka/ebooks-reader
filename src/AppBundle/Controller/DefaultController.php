@@ -37,7 +37,7 @@ class DefaultController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $file = $form->get(NewBook::FILE)->getData();
             $name = $file->getClientOriginalName();
-            
+
             $fileUpload = new FileUpload($this->container->getParameter('upload_dir'));
             $fileUpload->upload($file);
             die('ok');
