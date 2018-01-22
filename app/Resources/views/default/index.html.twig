@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <main>
+        <div class="container">
+            <div class="row">
+                <!-- blog-contents -->
+                <section class="col-md-8">
+
+                    {% if books is empty %}
+
+                        <article class="blog-item">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1>
+                                        No book in your collection yet
+                                    </h1>
+                                </div>
+                            </div>
+                        </article> <!-- /.blog-item -->
+
+                     {% else %}
+                         <article class="blog-item">
+                             <div class="row">
+                                 <div class="col-md-12">
+                                     <p>
+                                         in
+                                         <a href="html5-templates.html">html5</a>
+                                         ,
+                                         <a href="#">templates</a>
+                                         <time>23-july-2015<time>
+                                     </p>
+                                     <h1>
+                                         <a href="single_blog_page.html">50+ best free responsive corporate template in 2015</a>
+                                     </h1>
+                                 </div>
+                             </div>
+                         </article> <!-- /.blog-item -->
+
+                         <div class="page-turn">
+                             <div class="row">
+                                 <div class="col-md-6 col-md-offset-3 text-center">
+                                     <nav>
+                                         <ul class="pagination pagination-sm">
+                                             <li class="disabled">
+                                                 <a href="#" aria-label="Previous">
+                                                     <span aria-hidden="true">Prev</span>
+                                                 </a>
+                                             </li>
+                                             <li class="active"><a href="index.html">1</a></li>
+                                             <li><a href="page2.html">2</a></li>
+                                             <li><a href="page3.html">3</a></li>
+                                             <li><a href="page4.html">4</a></li>
+                                             <li><a href="page5.html">5</a></li>
+                                             <li>
+                                                 <a href="page6.html" aria-label="Next">
+                                                     <span aria-hidden="true">Next</span>
+                                                 </a>
+                                             </li>
+                                         </ul> <!-- /.pagination -->
+                                     </nav>
+                                 </div>
+                             </div>
+                         </div> <!-- /.page-turn -->
+                    {% endif %}
+
+                </section>
+                <!-- end of blog-contents -->
+
+                <!-- sidebar -->
+                <aside class="col-md-4 col-sm-8 col-xs-8">
+                    <div class="sidebar">
+
+                        <!-- search option -->
+                        <div class="search-widget">
+                            <div class="input-group margin-bottom-sm">
+                                <input class="form-control" type="text" placeholder="Search here">
+                                <a href="#" class="input-group-addon">
+                                    <i class="fa fa-search fa-fw"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- subscribe form -->
+                        <div class="subscribe-widget hide">
+                            <h4 class="text-capitalize text-center">
+                                get recent update by email
+                            </h4>
+                            <div class="input-group margin-bottom-sm">
+                                <input class="form-control" type="text" placeholder="Your Email">
+                                <a href="#" class="input-group-addon">
+                                    <i class="fa fa-paper-plane fa-fw"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </aside>
+                <!-- end of sidebar -->
+
+            </div>
+        </div> <!-- end of /.container -->
+    </main>
+{% endblock %}
+
