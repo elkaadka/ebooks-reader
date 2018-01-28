@@ -33,9 +33,9 @@ class Book
     /**
      * @var string
      *
-     * @ORM\Column(name="url", type="text")
+     * @ORM\Column(name="drop_box_id", type="string", length=100)
      */
-    private $url;
+    private $dropBoxId;
 
     /**
      * @var string
@@ -267,5 +267,29 @@ class Book
     public function getTags()
     {
         return $this->tags;
+    }
+
+    /**
+     * Set dropBoxId
+     *
+     * @param string $dropBoxId
+     *
+     * @return Book
+     */
+    public function setDropBoxId($dropBoxId)
+    {
+        $this->dropBoxId = $dropBoxId;
+
+        return $this;
+    }
+
+    /**
+     * Get dropBoxId
+     *
+     * @return string
+     */
+    public function getDropBoxId()
+    {
+        return $this->dropBoxId;
     }
 }

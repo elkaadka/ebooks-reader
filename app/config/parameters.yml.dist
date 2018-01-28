@@ -19,8 +19,8 @@ parameters:
     secret: ThisTokenIsNotSoSecretChangeIt
 
     #Dropbox access Token
-    dropbox_access_token: ThisTokenIsNotValid
-
+    dropbox_access_token: YourDropBoxAccessToken
+    dropbox_folder: /ebooks/
     upload_dir: /tmp/
 
 

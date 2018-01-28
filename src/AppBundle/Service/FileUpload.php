@@ -13,13 +13,13 @@ class FileUpload
         $this->targetDir = $targetDir;
     }
 
-    public function upload(UploadedFile $file)
+    public function upload(UploadedFile $file): string
     {
         $fileName = md5(uniqid()).'.'.$file->guessExtension();
 
         $file->move($this->getTargetDir(), $fileName);
 
-        return $fileName;
+        return $this->getTargetDir() . $fileName;
     }
 
     public function getTargetDir()

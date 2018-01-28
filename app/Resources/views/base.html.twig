@@ -34,10 +34,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li {% if app.request.get('_route') == 'mybooks' %}class="active"{% endif %}><a href="/books">My books</a></li>
-                    <li {% if app.request.get('_route') == 'allbooks' %}class="active"{% endif %}><a href="/books/all">All books</a></li>
-                    <li {% if app.request.get('_route') == 'searchbook' %}class="active"{% endif %}><a href="/books/search">Search</a></li>
-                    <li {% if app.request.get('_route') == 'newbook' %}class="active"{% endif %}><a href="/books/new">Upload a book</a></li>
+                    <li {% if app.request.get('_route') == 'mybooks' %}class="active"{% endif %}><a href="{{ path('mybooks') }}">My books</a></li>
+                    <li {% if app.request.get('_route') == 'allbooks' %}class="active"{% endif %}><a href="{{ path('allbooks') }}">All books</a></li>
+                    <li {% if app.request.get('_route') == 'searchbook' %}class="active"{% endif %}><a href="{{ path('searchbook') }}">Search</a></li>
+                    <li {% if app.request.get('_route') == 'newbook' %}class="active"{% endif %}><a href="{{ path('newbook') }}">Upload a book</a></li>
                 </ul>
             </div><!-- end of /.navbar-collapse -->
         </div><!-- end of /.container -->
